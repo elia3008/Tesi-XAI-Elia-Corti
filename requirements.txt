@@ -1,0 +1,19 @@
+# Dipendenze del progetto — versioni congelate per riproducibilità
+# Rigenera con: pip freeze > requirements.txt
+# Installa con: pip install -r requirements.txt
+
+numpy==1.26.4
+pandas==3.0.3
+scikit-learn==1.8.0
+matplotlib==3.10.8
+shap==0.52.0
+dice-ml==0.12
+alibi==0.9.6
+joblib==1.5.3
+jupyter
+ipykernel==7.3.0
+nbformat==5.10.4
+
+# Nota: numpy è fissato a 1.26.x perché alibi 0.9.6 non è compatibile
+# con numpy>=2. Non aggiornare numpy senza verificare la compatibilità
+# con alibi e shap.
