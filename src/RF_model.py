@@ -13,11 +13,11 @@ ART = Path("artifacts")
 RANDOM_STATE = 123
 
 rf_grid = {
-    "n_estimators":      np.arange(100, 500, 50),      # numero di alberi
-    "max_depth":         [None, 3, 5, 8, 10],          # profondità massima
-    "min_samples_split": np.arange(2, 20, 2),          # campioni per dividere un nodo
-    "min_samples_leaf":  np.arange(1, 20, 2),          # campioni minimi in una foglia
-    "max_features":      ["sqrt", "log2", None],       # feature per split
+    "n_estimators":      np.arange(100, 500, 50),      
+    "max_depth":         [None, 3, 5, 8, 10],          
+    "min_samples_split": np.arange(2, 20, 2),          
+    "min_samples_leaf":  np.arange(1, 20, 2),          
+    "max_features":      ["sqrt", "log2", None],
 }
 
 
@@ -62,7 +62,7 @@ def main():
         print(f"  {nome:8}  Accuracy={accuracy_score(y_test, pred):.3f}  "
               f"AUC={roc_auc_score(y_test, proba):.3f}")
 
-    # Assenza di un miglioramento considerevole con il tuning del modello: scelgo di utilizzare il modello di default
+    # Tuning non migliora: uso il modello default
     ART.mkdir(exist_ok=True)
     joblib.dump(default, ART / "model.joblib")
     joblib.dump(
