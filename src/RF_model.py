@@ -12,6 +12,13 @@ DATA = Path("data/heart-disease-UCI.csv")
 ART = Path("artifacts")
 RANDOM_STATE = 123
 
+df = pd.read_csv(r"C:\Users\ELIA\Documents\Tesi\Script\Tesi-XAI\data\heart_disease_cleveland.csv")
+print(f"Shape: {df.shape}")
+print(f"\nTarget distribution:\n{df['target'].value_counts()}")
+print(f"\nDisease rate: {df['target'].mean():.2%}")
+df.head()
+
+
 rf_grid = {
     "n_estimators":      np.arange(100, 500, 50),      
     "max_depth":         [None, 3, 5, 8, 10],          
@@ -25,7 +32,7 @@ def main():
     # Setup random seed
     np.random.seed(RANDOM_STATE)
 
-    df = pd.read_csv(DATA)
+    #df = pd.read_csv(DATA)
     X = df.drop("target", axis=1)
     y = df["target"]
 
