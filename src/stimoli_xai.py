@@ -328,7 +328,7 @@ def _n_modifiche(riga_cf, originale, colonne):
     return int(sum(not np.isclose(float(riga_cf[c]), float(originale[c])) for c in colonne))
 
 
-def controfattuali_sparsi(dice_exp, originale, variabili, max_modifiche=3,
+def controfattuali_sparsi(dice_exp, originale, variabili, max_modifiche=5,
                           n_scenari=2, pool_CFs=20, posthoc_sparsity_param=0.1):
     """Genera un bacino ampio di controfattuali e tiene solo i più sparsi.
 
