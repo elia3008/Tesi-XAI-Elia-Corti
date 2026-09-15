@@ -7,7 +7,7 @@ confidenza (modello lineare misto), asimmetria di SHAP, affidabilita' e
 confronti a coppie sulla scala ESS.
 
 I confronti D1 ed eta' stimati con il modello a effetti misti (lme4) sono
-nello script R separato (analisi_R_lme4.R), che legge l'output di questo
+nello script R separato (mixed_model.R), che legge l'output di questo
 script (simulatability_items.csv) come input. Servono entrambi per
 riprodurre per intero il Capitolo 4: nessun pacchetto Python disponibile
 stima in modo affidabile un modello a effetti misti logistico per questo

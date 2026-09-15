@@ -24,6 +24,10 @@ Tesi-XAI-Elia-Corti/
 ├── notebooks/
 │   ├── 01_eda.ipynb          # esplorazione dati: distribuzioni, correlazioni, statistiche
 │   └── 02_spiegazioni_xai.ipynb  # SHAP, DiCE e Anchors sui pazienti selezionati
+├── ch4/
+│   ├── GEE.py                 # Cap. 4: descrittive, GEE per D1 ed età, D2, calibrazione (Python)
+│   └── mixed_model.R          # Cap. 4: stessi confronti D1 ed età con lme4 (R); esegui
+│                               # GEE.py per primo, poi mixed_model.R nella cartella output/ che genera
 ├── artifacts/                # modello e split salvati (rigenerabili)
 ├── requirements.txt          # dipendenze con versioni congelate
 ├── questionario/
@@ -65,7 +69,19 @@ Apri i notebook nella cartella `notebooks/` nell'ordine:
 - `01_eda.ipynb` — analisi esplorativa del dataset pulito
 - `02_spiegazioni_xai.ipynb` — spiegazioni SHAP, DiCE e Anchors per i pazienti selezionati
 
+### 4. Riproduci l'analisi statistica del Capitolo 4
 
+```bash
+cd ch4
+python GEE.py          # legge i dati del questionario, genera output/ con tutte le tabelle
+                        # (descrittive, GEE per D1 ed età, D2, calibrazione, affidabilità ESS)
+cp mixed_model.R output/
+cd output
+Rscript mixed_model.R  # stessi confronti D1 ed età, stimati con lme4 per il confronto incrociato
+```
+
+`mixed_model.R` richiede il pacchetto R `lme4` (`install.packages("lme4")`, o su
+Ubuntu `apt-get install r-cran-lme4`).
 
 ---
 
@@ -83,6 +99,9 @@ Apri i notebook nella cartella `notebooks/` nell'ordine:
   numpy: nessun conflitto con `shap==0.52.0` (che invece richiede numpy>=2).
 - La cartella `artifacts/` non è presente (vedi `.gitignore`): va rigenerata
   eseguendo la pipeline nell'ordine indicato sopra.
+- `questionario/xai_study_elia.py` è lo snapshot del codice usato per la raccolta dati; la versione
+  effettivamente in esecuzione durante lo studio resta pubblicata separatamente su Streamlit
+  Community Cloud, non fa parte della pipeline riproducibile qui sopra.
 
 ---
 

@@ -1,7 +1,7 @@
 # =============================================================================
 # Analisi statistica del Capitolo 4 -- PARTE R (modello a effetti misti)
 # =============================================================================
-# Legge l'output di analisi_python.py (simulatability_items.csv, age_group.csv)
+# Legge l'output di GEE.py (simulatability_items.csv, age_group.csv)
 # e stima con lme4::glmer (approssimazione di Laplace) tutti i confronti D1 ed
 # eta' presentati come "modello a effetti misti" nel capitolo. Da eseguire
 # nella cartella output/ prodotta dallo script Python.
