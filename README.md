@@ -26,6 +26,8 @@ Tesi-XAI-Elia-Corti/
 │   └── 02_spiegazioni_xai.ipynb  # SHAP, DiCE e Anchors sui pazienti selezionati
 ├── artifacts/                # modello e split salvati (rigenerabili)
 ├── requirements.txt          # dipendenze con versioni congelate
+├── questionario/
+│   └── xai_study_elia.py     # app Streamlit del questionario per lo studio con utenti
 └── README.md
 ```
 
