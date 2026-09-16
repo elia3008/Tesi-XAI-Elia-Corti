@@ -10,6 +10,9 @@
 # di questo repository: sono dipendenze di alibi==0.5.5, la versione
 # realmente in uso e verificata funzionante (non 0.9.6, come indicato
 # in una versione precedente di questo file).
+# pyarrow non è una dipendenza diretta del codice: pandas 3.x lo usa
+# internamente quando disponibile, quindi serve per poter ricaricare con
+# joblib gli artefatti (split.joblib) salvati da un ambiente che lo aveva.
 
 absl-py==2.4.0
 alibi==0.5.5
@@ -121,6 +124,7 @@ prompt_toolkit==3.0.52
 protobuf==7.35.1
 psutil==7.2.2
 pure_eval==0.2.3
+pyarrow==25.0.1
 pycparser==3.0
 pydantic==2.13.4
 pydantic_core==2.46.4
