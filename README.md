@@ -80,7 +80,10 @@ cd output
 Rscript mixed_model.R  # stessi confronti D1 ed età, stimati con lme4 per il confronto incrociato
 ```
 
-`mixed_model.R` richiede il pacchetto R `lme4` (`install.packages("lme4")`, o su
+`GEE.py` richiede in ingresso il file con le risposte del questionario
+(`ch4/Dati_questionario_XAI.xlsx`, non incluso in questo repository in attesa di
+una decisione sulla pubblicazione dei dati). `mixed_model.R` richiede il
+pacchetto R `lme4` (`install.packages("lme4")`, o su
 Ubuntu `apt-get install r-cran-lme4`).
 
 ---

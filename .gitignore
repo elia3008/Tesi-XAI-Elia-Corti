@@ -11,6 +11,10 @@ __pycache__/
 
 # Artefatti rigenerabili (modello, split, immagini)
 artifacts/
+ch4/output/
+
+# Dati questionario -- non pubblicare finche' non e' chiaro se e' possibile
+ch4/Dati_questionario_XAI.xlsx
 
 # Sistema operativo / editor
 .DS_Store
