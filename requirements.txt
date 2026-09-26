@@ -2,10 +2,7 @@
 # Generato con: pip freeze > requirements.txt
 # Installa con: pip install -r requirements.txt
 #
-# File completo (non curato a mano): include tutte le dipendenze,
-# dirette e indirette, dell'ambiente in cui il progetto è stato
-# sviluppato ed eseguito con successo, per garantire un'installazione
-# riproducibile. Alcuni pacchetti (tensorflow, spacy e il suo indotto,
+# Alcuni pacchetti (tensorflow, spacy e il suo indotto,
 # scikit-image, xgboost) non sono richiamati direttamente dal codice
 # di questo repository: sono dipendenze di alibi==0.5.5, la versione
 # realmente in uso e verificata funzionante (non 0.9.6, come indicato
